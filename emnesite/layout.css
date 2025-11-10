@@ -1,0 +1,96 @@
+/*************** Reset *********************/
+* {
+  margin: 0;
+  padding: 0px;
+  box-sizing: border-box;
+}
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.baggrund {
+  max-width: 1400px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto; /* Centrerer billedet */
+}
+h1 {
+  text-align: center;
+}
+p {
+  color: rgb(0, 0, 0);
+  font-family: "Times New Roman", Times, serif;
+  font-size: medium;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  text-wrap: pretty;
+}
+@media screen and (min-width: 800px) {
+  .grid-1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+
+  @media screen and (min-width: 800) {
+  }
+  .grid-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+  }
+  .text {
+    padding: 40px;
+  }
+
+  .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Justér tekstens placering på siden */
+  .grid-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start; /* <-- gør at teksten står øverst, ikke midt */
+    padding: 0px;
+    gap: 40px;
+  }
+
+  /* Sørg for at teksten får god afstand fra kanten */
+  .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* <-- teksten starter øverst */
+    align-items: flex-start;
+    padding-top: 60px; /* justér efter behov */
+    max-width: 600px;
+  }
+
+  /* Billede fylder stadig hele højden */
+  .image img,
+  .image2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Gælder kun Cold Brew sektionen */
+  .text2,
+  .image2 {
+    flex: 1;
+  }
+
+  /* Byt rundt på rækkefølgen */
+  .text2 {
+    order: 2;
+  }
+
+  .image2 {
+    order: 1;
+  }
+}
